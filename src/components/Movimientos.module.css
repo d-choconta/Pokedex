@@ -1,0 +1,39 @@
+.boton-movimientos {
+    position: relative;
+    color: white;
+    padding: 12px 30px;
+    margin-top: 20px;
+    border: 2px solid #d25151;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: color 0.3s;
+    overflow: hidden;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    z-index: 1;
+  }
+  
+  .boton-movimientos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d25151;
+    z-index: -1;
+    transform: scaleX(0); 
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .boton-movimientos:hover::before {
+    transform: scaleX(1); 
+  }
+  
+  .boton-movimientos:hover {
+    color: black; 
+  }

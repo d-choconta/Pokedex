@@ -1,0 +1,172 @@
+.container { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, #4cc9f0, #4361ee);
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  margin-top: 90px;
+  text-align: center;
+}
+
+
+.loadingContainer {
+  width: 99vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #141414;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #ff0000;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loadingText {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+.title {
+  font-size: 3rem;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.pokemonImage {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: white;
+  padding: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*Contenedor principal de info con dos columnas en escritorio */
+.infoContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 800px;
+  width: 100%;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+}
+
+/* Columnas de información */
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+
+.column p {
+  display: flex;
+  flex-direction: column; 
+  font-size: 1.4rem;
+  margin: 12px 0;
+  margin-bottom: 1px;
+  align-items: center;
+}
+
+
+.column p strong {
+  color: #ffbe0b;
+  display: block; 
+  font-size: 1.4rem;
+  margin-bottom: 0px;
+}
+
+
+.subTitle {
+  font-size: 1.4rem;
+  margin-top: 15px;
+  color: #ffbe0b;
+  margin-bottom: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Secciones extra en una cuadrícula */
+.extraInfoContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  max-width: 800px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Columnas pequeñas */
+.columnSmall {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 12px;
+}
+
+/* Adaptación celular */
+@media (max-width: 768px) {
+
+  .infoContainer {
+    grid-template-columns: 1fr; 
+  }
+  
+  .extraInfoContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .pokemonImage {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    margin-top: 150px;
+  }
+}
+
+/* Evitar que los elementos sean demasiado estrechos en pantallas grandes */
+@media (min-width: 1024px) {
+  .container { 
+    width: 96.4vw; 
+    max-width: 100%;
+  }
+  .infoContainer {
+    width: 80%;
+    max-width: 1200px;
+  }
+
+  .extraInfoContainer {
+    width: 80%;
+    max-width: 1200px;
+  }
+}

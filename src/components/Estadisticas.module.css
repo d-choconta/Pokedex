@@ -1,0 +1,105 @@
+.container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px; 
+  color: #333;
+}
+
+.chart {
+  display: flex;
+  align-items: flex-end; 
+  justify-content: space-around;
+  height: 220px;
+  width: 100%;
+  max-width: 90%;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 250px;
+  flex-wrap: nowrap;
+}
+
+.statColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15%;
+  margin: 0 5px;
+  position: relative; 
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  color: white; 
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+.bar span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  z-index: 10; 
+}
+
+
+
+.label {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.emptyMessage {
+  font-size: 16px;
+  color: red;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .chart {
+    height: 150px;
+    padding: 10px;
+    min-height: 120px;
+  }
+
+  .statColumn {
+    width: 12%;
+    margin: 0 2px;
+  }
+
+  .bar {
+    font-size: 10px;
+    min-height: 20px;
+    max-height: 120px;
+  }
+
+  .label {
+    font-size: 10px;
+  }
+}

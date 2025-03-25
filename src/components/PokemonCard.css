@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.pokemon-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    padding: 20px;
+  }
+  
+.pokemon-card {
+    cursor: pointer;
+    border-radius: 15px;
+    text-align: center;
+    padding: 15px;
+    width: 180px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+    background: linear-gradient(to bottom, var(--color-light), var(--color-dark));
+  }
+  
+  .pokemon-card:hover {
+    transform: scale(1.08);
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .pokemon-name {
+    font-size: 1.4rem;
+    text-transform: capitalize;
+  }
+  
+  .pokemon-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+  
+  .pokemon-types {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 10px 0;
+  }
+  
+  .type-badge {
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
+  
+  /* Colores para los tipos de Pokémon */
+  .fire {
+    background: linear-gradient(45deg, rgba(255, 156, 87, 0.7), rgba(230, 92, 0, 0.7));
+  }
+  .water {
+    background: linear-gradient(45deg, rgba(106, 183, 245, 0.7), rgba(59, 115, 207, 0.7));
+  }
+  
+  .grass {
+    background: linear-gradient(45deg, rgba(155, 204, 80, 0.7), rgba(94, 175, 36, 0.7));
+  }
+  
+  .electric {
+    background: linear-gradient(45deg, rgba(255, 234, 0, 0.7), rgba(212, 175, 0, 0.7));
+  }
+  
+  .ice {
+    background: linear-gradient(45deg, rgba(116, 212, 227, 0.7), rgba(57, 164, 183, 0.7));
+  }
+  
+  .fighting {
+    background: linear-gradient(45deg, rgba(214, 120, 115, 0.7), rgba(161, 47, 47, 0.7));
+  }
+  
+  .poison {
+    background: linear-gradient(45deg, rgba(163, 62, 161, 0.7), rgba(98, 41, 122, 0.7));
+  }
+  
+  .ground {
+    background: linear-gradient(45deg, rgba(223, 191, 105, 0.7), rgba(167, 124, 55, 0.7));
+  }
+  
+  .flying {
+    background: linear-gradient(45deg, rgba(189, 185, 184, 0.7), rgba(124, 122, 122, 0.7));
+  }
+  
+  .psychic {
+    background: linear-gradient(45deg, rgba(243, 102, 185, 0.7), rgba(164, 42, 108, 0.7));
+  }
+  
+  .bug {
+    background: linear-gradient(45deg, rgba(144, 193, 44, 0.7), rgba(90, 139, 30, 0.7));
+  }
+  
+  .rock {
+    background: linear-gradient(45deg, rgba(163, 140, 33, 0.7), rgba(94, 76, 30, 0.7));
+  }
+  
+  .ghost {
+    background: linear-gradient(45deg, rgba(123, 98, 163, 0.7), rgba(70, 59, 118, 0.7));
+  }
+  
+  .dragon {
+    background: linear-gradient(45deg, rgba(241, 110, 87, 0.7), rgba(94, 28, 26, 0.7));
+  }
+  
+  .dark {
+    background: linear-gradient(45deg, rgba(112, 88, 72, 0.7), rgba(64, 52, 41, 0.7));
+  }
+  
+  .steel {
+    background: linear-gradient(45deg, rgba(184, 184, 208, 0.7), rgba(122, 122, 140, 0.7));
+  }
+  
+  .fairy {
+    background: linear-gradient(45deg, rgba(253, 185, 233, 0.7), rgba(218, 125, 187, 0.7));
+  }
+  
+  @media (max-width: 768px) {  
+    .pokemon-container {
+        gap: 10px; 
+        padding: 10px; 
+    }
+
+    .pokemon-card {
+        width: 140px; 
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .pokemon-name {
+        font-size: 1.2rem; 
+    }
+
+    .pokemon-image {
+        width: 80px; 
+        height: 80px;
+    }
+
+    .pokemon-types {
+        gap: 5px; 
+        margin: 5px 0;
+    }
+
+    .type-badge {
+        font-size: 0.7rem; 
+        padding: 3px 8px;
+    }
+}
+
+@media (max-width: 480px) {  
+    .pokemon-container {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .pokemon-card {
+        width: 160px; 
+        padding: 12px;
+    }
+
+    .pokemon-name {
+        font-size: 1rem;
+    }
+
+    .pokemon-image {
+        width: 70px;
+        height: 70px;
+    }
+}

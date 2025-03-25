@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@500&display=swap');
+
+/* Contenedor general */
+.contenedor {
+  width: 99vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #141414;
+  padding: 40px 0;
+  overflow-x: hidden;
+}
+
+/* Sección Grid */
+.gridContainer {
+  width: 90%; 
+  max-width: 1200px; 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+/* Sección Info */
+.info {
+  width: 100%;
+  max-width: 900px;
+  text-align: left;
+  color: white;
+  margin-top: 95px;
+  margin-left: -300px ;
+  margin-bottom: 200px;
+
+
+}
+
+.titulo {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.subtitulo {
+  font-size: 1.2rem;
+  color: #bbbbbb;
+  margin-top: 10px;
+}
+
+
+.btn {
+  position: relative;
+  color: white;
+  padding: 12px 30px;
+  margin-top: 20px;
+  border: 2px solid #d25151;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: color 0.3s;
+  overflow: hidden;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  z-index: 1; 
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d25151;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn:hover::before {
+  transform: scaleX(1);
+}
+
+.btn:hover {
+  color: black; 
+}
+
+.textoConImagen {
+  display: flex;
+  flex-direction: column; 
+  text-align: left;
+  gap: 20px; 
+  width: 1400px;
+}
+
+.imagenContainer img {
+  width: 400px; 
+  height: auto;
+  margin-left: 40px;
+}
+
+.contenedorTexto {
+  display: flex;
+  align-items: center; 
+  gap: 20px; 
+}
+
+.imagenpika img {
+  width: 550px; 
+  height: auto;
+}
+
+.texto {
+  max-width: 600px; 
+  margin-top: -150px;
+  margin-left: 70px;
+}
+
+.texto {
+  max-width: 600px; 
+  margin-top: -150px;
+  margin-left: 70px;
+}
+
+.textocartas{
+  margin-left: 10px;
+}
+
+.loadingContainer {
+  width: 99vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #141414;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #ff0000;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loadingText {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .contenedor {
+    align-items: center; 
+    margin-top: 50px;
+  }
+
+  .textoConImagen{
+    display: flex;
+    flex-direction: column; 
+    text-align: left;
+    gap: 20px; 
+    width: 1400px;
+  }
+  
+  .titulo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    line-height: 1.2;
+  }
+
+  .subtitulo {
+    font-size: 1.5rem;
+    color: #bbbbbb;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .imagenContainer{
+    margin-top: 100px;
+    width: 120px;
+    height: 120px;
+    align-items: center;
+  }
+  .imagenpika {
+    width: 150px;
+    height: 150px;
+    align-items: center;
+  }
+  /* Sección Grid */
+  .gridContainer {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Cartas más pequeñas */
+    gap: 10px; 
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+  }
+
+  /* Ajuste de las tarjetas */
+  .tarjeta {
+      min-height: 180px;
+      padding: 8px;
+      font-size: 0.9rem; 
+  }
+}
+
+@media (max-width: 1200px) {
+  .contenedor{
+    display: flex;
+    align-items: flex-end;
+  }
+  .textoConImagen{
+    width: 100vw;
+  }
+  .contenedorTexto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+  }
+  .contenedorTexto{
+    width: 100vw;
+    display: flex;
+
+  }
+  .imagenpika img {
+    width: 200px;
+    height: auto;
+  }
+
+  .imagenContainer {
+   margin-top: 100px;
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+  }
+}
