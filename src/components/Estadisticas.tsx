@@ -28,7 +28,7 @@ const Estadisticas: React.FC<EstadisticasProps> = ({ stats = [] }) => {
     return <p className={styles.emptyMessage}>No hay estadísticas disponibles.</p>;
   }
 
-  const maxStat = Math.max(...stats.map((stat) => stat.base_stat), 1); // Evita divisiones por 0
+  const maxStat = Math.max(...stats.map((stat) => stat.base_stat), 1); 
 
   return (
     <div className={styles.container}>

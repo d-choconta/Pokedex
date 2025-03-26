@@ -31,10 +31,10 @@ const PaginaInicio = () => {
   
   return (
     <div className={styles.contenedor}>
-      {/* Sección Info */}
+      
       <section className={styles.info}>
         <div className={styles.textoConImagen}>
-          {/* Imagen Logo Pokemon */}
+          
           <div className={styles.imagenContainer}>
             <img 
               src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pokémon_logo.svg" 
@@ -43,14 +43,14 @@ const PaginaInicio = () => {
             />
           </div>
 
-          {/* Contenedor imagen al lado del texto */}
+         
           <div className={styles.contenedorTexto}>
-            {/* Imagen al lado del texto */}
+            
             <div className={styles.imagenpika}>
               <img src={pikaImage} alt="Pokémon pika" className={styles.imagen} />
             </div>
 
-            {/* Texto con botón */}
+            
             <div className={styles.texto}>
               <h1 className={styles.titulo}>¡Bienvenido! Encuentra a los Pokémones más fuertes y raros.</h1>
               <p className={styles.subtitulo}>
@@ -62,12 +62,12 @@ const PaginaInicio = () => {
         </div>
       </section>
 
-      {/* Sección titulo Pokémones */}
+      
       <div className={styles.textocartas}>
         <h1 className={styles.titulo}>Pokémones encontrados en esta región:</h1>
       </div>
 
-      {/* Sección Grid */}
+      
       <section className={styles.gridContainer}>
         {pokemons?.length ? (
           pokemons.map((pokemon: Pokemon) => (

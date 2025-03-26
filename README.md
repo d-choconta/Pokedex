@@ -36,7 +36,7 @@ Sigue estos pasos para ejecutar la Pokédex en tu máquina:
 ```sh
 git clone https://github.com/d-choconta/Pokedex
 2. Ingresar a la ubicacion de la carpeta del proyecto.
-3. Corre el comando **cd pokedex-app ** en la terminal de Visual Studio Code.
+3. Corre el comando **cd pokedex-app** en la terminal de Visual Studio Code.
 4. Instala las dependencias *npm install*. 
 5. Instala Apollo Client y GraphQL *npm install @apollo/client graphql*
 6. Inicia el servidor de desarrollo *npm run dev*

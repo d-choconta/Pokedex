@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 import { Pokemon } from "../types/pokemon";
 import "./PokemonCard.css";
 
@@ -9,44 +9,37 @@ interface Props {
 const PokemonCard: React.FC<Props> = ({ pokemon }) => {
   const navigate = useNavigate();
 
-  // Verificar tipo del Pokémon
   const typeClass =
     pokemon.pokemon_v2_pokemontypes?.[0]?.pokemon_v2_type?.name?.toLowerCase() || "normal";
 
-  // Obtener la imagen del Pokémon
-  let pokemonImage = pokemon.image;
+  let pokemonImage: string = pokemon.image;
 
   if (!pokemonImage) {
-    let sprites: any = pokemon.pokemon_v2_pokemonsprites?.[0]?.sprites;
-
-    if (typeof sprites === "string") {
+    const spriteData = pokemon.pokemon_v2_pokemonsprites?.[0]?.sprites;
+    console.log("Raw sprite data:", spriteData); 
+    
+    if (spriteData) {
       try {
-        sprites = JSON.parse(sprites);
+        const sprites = typeof spriteData === "string" ? JSON.parse(spriteData) : spriteData;
+        console.log("Parsed sprites:", sprites); 
+
+        pokemonImage =
+          sprites?.other?.["official-artwork"]?.front_default ||
+          sprites?.front_default ||
+          "https://placehold.co/100";
       } catch (error) {
         console.error("Error al parsear sprites:", error);
-        sprites = null;
+        pokemonImage = "https://placehold.co/100";
       }
-    }
-
-    if (sprites && typeof sprites === "object") {
-      pokemonImage =
-        sprites?.other?.["official-artwork"]?.front_default ||
-        sprites?.front_default ||
-        "https://placehold.co/100";
     } else {
       pokemonImage = "https://placehold.co/100";
     }
   }
 
-  // imprime consola
-  console.log("Datos del Pokémon:", pokemon);
-  console.log("Sprites:", pokemon.pokemon_v2_pokemonsprites);
-
   return (
     <div className={`pokemon-card ${typeClass}`} onClick={() => navigate(`/perfil/${pokemon.id}`)}>
       <h3 className="pokemon-name">{pokemon.name}</h3>
 
-      {/* Imagen del Pokémon */}
       <img
         className="pokemon-image"
         src={pokemonImage}
@@ -57,7 +50,6 @@ const PokemonCard: React.FC<Props> = ({ pokemon }) => {
         }}
       />
 
-      {/* Tipos del Pokémon */}
       <div className="pokemon-types">
         {pokemon.pokemon_v2_pokemontypes?.length ? (
           pokemon.pokemon_v2_pokemontypes.map((typeObj, index) => (

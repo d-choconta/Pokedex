@@ -9,14 +9,14 @@ const Searchbar = ({ onSearch }: SearchbarProps) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchType, setSearchType] = useState("");
 
-  // Llamar a la búsqueda en tiempo real cuando cambie searchTerm o searchType
+
   useEffect(() => {
     onSearch(searchTerm, searchType);
   }, [searchTerm, searchType, onSearch]);
   
   return (
     <div className={styles.searchContainer}>
-      {/* Búsqueda por nombre */}
+      
       <input
         type="text"
         placeholder="Buscar Pokémon..."
@@ -25,7 +25,7 @@ const Searchbar = ({ onSearch }: SearchbarProps) => {
         className={styles.searchInput}
       />
   
-      {/* Filtro por tipo */}
+      
       <select
         value={searchType}
         onChange={(e) => setSearchType(e.target.value)}

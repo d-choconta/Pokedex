@@ -30,10 +30,10 @@ const Busqueda = () => {
     setSearchType(type?.toLowerCase() || "");
   };
 
-  // Asegurar que los datos existen antes de filtrar
+ 
   const pokemons: Pokemon[] = data?.pokemon_v2_pokemon || [];
 
-  // Filtrar los Pokémon según el nombre y tipo
+ 
   const filteredPokemons = pokemons.filter((pokemon) =>
     pokemon.name.toLowerCase().includes(searchTerm) &&
     (!searchType ||

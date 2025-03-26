@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@500&display=swap');
 
-/* Contenedor general */
+
 .contenedor {
   width: 99vw;
   min-height: 100vh;
@@ -13,7 +13,6 @@
   margin-top: 90px;
 }
 
-/* Títulos */
 .titulo {
   font-size: 3rem;
   font-weight: bold;
@@ -29,7 +28,7 @@
   margin-bottom: 40px;
 }
 
-/* Barra de búsqueda */
+
 .searchContainer {
   width: 90%;
   max-width: 600px;
@@ -41,7 +40,6 @@
 }
 
 
-/* Grid de Pokémon */
 .grid {
   width: 90%;
   max-width: 1200px;
@@ -51,7 +49,7 @@
   margin-top: 40px;
 }
 
-/* Mensaje cuando no hay resultados */
+
 .noResults {
   font-size: 1.2rem;
   color: white;
@@ -135,7 +133,7 @@
       padding: 10px;
   }
 
-  /* Ajuste de las tarjetas */
+
   .tarjeta {
       min-height: 180px;
       padding: 8px;

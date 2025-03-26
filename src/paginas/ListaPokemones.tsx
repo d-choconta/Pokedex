@@ -10,7 +10,7 @@ const pokemonsPerPage = 50;
 const ListaPokemones = () => {
   const [currentPage, setCurrentPage] = useState(0); 
 
-  // Obtener los Pokémon con paginación
+  
   const { loading, error, data } = useQuery(GET_ALL_POKEMONS, {
     variables: { limit: pokemonsPerPage, offset: currentPage * pokemonsPerPage },
     fetchPolicy: "cache-and-network",
@@ -28,7 +28,7 @@ const ListaPokemones = () => {
 
   const pokemons = data?.pokemon_v2_pokemon || [];
 
-  // Validación si no hay Pokémon disponibles
+  
   if (pokemons.length === 0) {
     return <p className={styles.noResults}>No se encontraron Pokémon.</p>;
   }
@@ -38,14 +38,14 @@ const ListaPokemones = () => {
       <h1 className={styles.titulo}>Lista de Pokémones</h1>
       <p className={styles.subtitulo}>Explora y descubre los Pokémon disponibles en la región.</p>
 
-      {/* Grid de Pokémon */}
+      
       <div className={styles.grid}>
         {pokemons.map((pokemon: Pokemon) => (
           <PokemonCard key={pokemon.id} pokemon={pokemon} />
         ))}
       </div>
 
-      {/* Controles de paginación */}
+      
       <div className={styles.pagination}>
         <button
           onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 0))}

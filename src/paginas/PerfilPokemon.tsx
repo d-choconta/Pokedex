@@ -38,7 +38,7 @@ const PerfilPokemon = () => {
     return <p className={styles.notFound}>Pokémon no encontrado.</p>;
   }
 
-  // imagen del Pokémon
+  
   let pokemonImage = 
     pokemon.image || 
     pokemon.pokemon_v2_pokemonsprites?.[0]?.sprites?.other?.["official-artwork"]?.front_default || 
@@ -55,9 +55,9 @@ const PerfilPokemon = () => {
         onError={(e) => (e.currentTarget.src = "https://placehold.co/100")}
       />
 
-      {/* Contenedor principal dos columnas */}
+      
       <div className={styles.infoContainer}>
-        {/* Primera columna */}
+        
         <div className={styles.column}>
           <p><strong>Altura:</strong> {pokemon.height || "N/A"}</p>
           <p><strong>Peso:</strong> {pokemon.weight || "N/A"}</p>
@@ -85,7 +85,7 @@ const PerfilPokemon = () => {
           </ul>
         </div>
 
-        {/* Segunda columna */}
+        
         <div className={styles.column}>
           <h3 className={styles.subTitle}>Estadísticas</h3>
           <Estadisticas 
@@ -107,15 +107,15 @@ const PerfilPokemon = () => {
         </div>
       </div>
 
-      {/* Contenedor Formas Alternativas, Ubicaciones, Especie y Evoluciones */}
+      
       <div className={styles.extraInfoContainer}>
-        {/* Formas Alternativas */}
+        
         <div className={styles.columnSmall}>
           <h3 className={styles.subTitle}>Formas Alternativas</h3>
           <p>{pokemon.pokemon_v2_pokemonforms?.map(f => f.form_name).join(", ") || "Ninguna"}</p>
         </div>
 
-        {/* Ubicaciones */}
+        
         <div className={styles.columnSmall}>
           <h3 className={styles.subTitle}>Ubicaciones</h3>
           <ul>
@@ -132,14 +132,14 @@ const PerfilPokemon = () => {
           </ul>
         </div>
 
-        {/* Especie */}
+        
         <div className={styles.columnSmall}>
           <h3 className={styles.subTitle}>Especie</h3>
           <p><strong>Felicidad Base:</strong> {pokemon.pokemon_v2_pokemonspecy?.base_happiness || "N/A"}</p>
           <p><strong>Tasa de Captura:</strong> {pokemon.pokemon_v2_pokemonspecy?.capture_rate || "N/A"}</p>
         </div>
 
-        {/* Evoluciones */}
+        
         <div className={styles.columnSmall}>
           <h3 className={styles.subTitle}>Evoluciones</h3>
           <ul>

@@ -43,7 +43,7 @@
     color: #d25151;
 }
 
-/* Subrayado animado */
+
 .navItem::after {
     content: "";
     display: block;

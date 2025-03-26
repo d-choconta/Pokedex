@@ -154,7 +154,7 @@ li {
   }
 }
 
-/* Evitar que los elementos sean demasiado estrechos en pantallas grandes */
+
 @media (min-width: 1024px) {
   .container { 
     width: 96.4vw; 
