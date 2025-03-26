@@ -15,6 +15,6 @@ export interface Pokemon {
 
   pokemon_v2_pokemonspecy?: { generation: string };
 
-  // Opcional: Imagen basada en `sprites`
+  //Imagen basada en sprites
   image?: string;
 }
